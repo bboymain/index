@@ -1,0 +1,280 @@
+body {
+    margin: 0;
+    padding: 0;
+
+
+}
+
+
+#nav {
+    top: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    background-color: #282830;
+    -webkit-box-shadow: 1px 2px 9px 5px rgba(0, 0, 0, 0.31);
+    -moz-box-shadow: 1px 2px 9px 5px rgba(0, 0, 0, 0.31);
+    box-shadow: 1px 2px 9px 5px rgba(0, 0, 0, 0.31);
+}
+
+#nav > ul {
+    display: flex;
+    flex-flow: row wrap;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+li > a {
+    font-family: 'Roboto Condensed', sans-serif;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px 50px;
+    text-decoration: none;
+    border-bottom: none;
+    font-size: 20px;
+
+
+}
+
+li > a:hover {
+    background-color: #34495e;
+}
+
+
+
+
+#page1 {
+    position: relative;
+	width: 100%;
+    height:110vh;
+    margin-top: -18px;
+    padding-top:80px;
+    text-align: center;   
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+#page2 {
+    background-color: pink;
+    height: 100vh;
+    width: 100%;
+    display: table;
+    text-align: center;
+    padding: 180px 0;
+
+}
+
+#page3 {
+    background-color: green;
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+    
+    padding: 180px 0;
+}
+
+
+
+
+.btn {
+    position: relative;
+    z-index: 99999999999;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 17px;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+
+}
+
+.btn:hover {
+    background-color: white;
+    transition-duration: 0.5s;
+    color: #0083AE;
+    outline: none;
+}
+
+.btn-default {
+    text-decoration: none;
+    color: white;
+    background: transparent;
+    border-color: #3498db;
+
+}
+
+
+a:hover,
+a:focus,
+a:active {
+    outline: none;
+}
+
+
+.cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+}
+
+.intro {
+   background-position: center;
+	background-repeat: no-repeat;
+	display: table;
+	width: 100%;
+    height: auto;
+    margin-top: -18px;
+    padding: 180px 0;
+    text-align: center;   
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.intro .intro-text {
+    margin-top: -30px;
+    font-size: 23px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700px;
+    color: #fff;  
+    
+    
+}
+
+.intro .intro-body .intro-heading {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700px;
+    font-size: 80px;
+    color: #fff;
+    margin-top: 50px;
+    
+}
+
+
+.intro .intro-body {
+    display: table-cell;
+    vertical-align: middle;
+    }
+
+.intro-heading > img {
+    vertical-align: middle;
+    width: 300px;
+    
+    
+}
+
+
+
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+.video-background {
+    background: #000;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -99;
+}
+
+.video-foreground,
+.video-background iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+#vidtop-content {
+    top: 0;
+    color: #fff;
+}
+
+.vid-info {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 33%;
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    padding: 1rem;
+    font-family: Avenir, Helvetica, sans-serif;
+}
+
+.vid-info h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 0;
+    line-height: 1.2;
+}
+
+.vid-info a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.5);
+    transition: .6s background;
+    border-bottom: none;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .video-foreground {
+        height: 300%;
+        top: -100%;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .video-foreground {
+        width: 300%;
+        left: -100%;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .vid-info {
+        width: 50%;
+        padding: .5rem;
+    }
+    .vid-info h1 {
+        margin-bottom: .2rem;
+    }
+}
+
+@media all and (max-width: 500px) {
+    .vid-info .acronym {
+        display: none;
+    }
+}
